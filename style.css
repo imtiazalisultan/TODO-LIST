@@ -151,3 +151,20 @@ cursor: pointer;
     text-decoration: line-through ;
     opacity: 0.5;
 }
+@media only screen and (max-width:800px) {
+    /* For tablets: */
+    .banner-con {
+      width: 100%;
+      padding: 0;
+    }
+    .banner,.todo, .content {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .banner-con, .todo, .content {
+      width: 100%;
+    }
+  }
