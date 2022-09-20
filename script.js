@@ -80,7 +80,7 @@ function determineWords(speech,words){
     // by using Voice command submit the Todo in the List...
     if(words.includes('submit')){
         //console.log("ok i am submitting");
-        speech.text='ok i am submiting for you sir';
+        speech.text='ok sir i had added the task in your todo list';
         addToDo();
     }else if(words.includes('clear the list')){
         clearTheList(speech);
