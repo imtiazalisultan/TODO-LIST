@@ -1,6 +1,6 @@
 # TODO-LIST
-https://polite-florentine-2a8c90.netlify.app
-https://imtiazalisultan.github.io/TODO-LIST/
+Netlify Host: https://polite-florentine-2a8c90.netlify.app
+GitHub  Host : https://imtiazalisultan.github.io/TODO-LIST/
 
 I Had make a Simple Todo list which uses basic JavaScript Function that implements the CRUD operations.
 I had Choosing this Project because of this CRUD opeartion we can learn the DOM manipulation with the help of JavaScript.
