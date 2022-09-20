@@ -43,9 +43,41 @@ function computerSpeech(words){
 function determineWords(speech,words){
 
  
-        
-   
+    if(words.includes('Hello Jarvis! how are you')){
+        speech.text='I am good , thank you for asking.'
+    }
+    if(words.includes('who am I')){
+        speech.text='You are my master!';
+    }
+    if(words.includes('how is the weather')){
+        speech.text='why you care about that? you never go out';
+    }
+    if(words.includes('do you love me')){
+        speech.text='why should i love you? You are a loser ';
+    }
+    if(words.includes('open Google')){
 
+        speech.text="Opening Google for you !"
+        window.open('https://www.google.com/');
+    }
+    if(words.includes('open Newton school for me')|| words.includes('open Newton school website')){
+
+        speech.text="opening Newton school for you sir";
+        window.open('https://www.newtonschool.co/');
+    }
+    if(words.includes('take me to the dashboard')){
+        speech.text='opening dashboard for you sir';
+        setTimeout(()=>{
+            window.open('https://my.newtonschool.co/dashboard/');
+           
+        },1000);
+    }
+    if(words.includes('open Facebook')|| words.includes('Hey open the Facebook')){
+        speech.text='Opening Facebook for you sir !'
+        window.open('https://www.facebook.com/');
+    }
+    
+    // by using Voice command submit the Todo in the List...
     if(words.includes('submit')){
         console.log("ok i am submitting");
         speech.text='ok i am submiting for you, sir';
@@ -53,7 +85,7 @@ function determineWords(speech,words){
     }else if(words.includes('clear the list')){
         clearTheList(speech);
     }else{
-        text.value=words;
+        text.value=words;  // this line indicate the feeding the text into the input Tag......by using Voice Assistant
     }
 }
 
