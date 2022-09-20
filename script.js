@@ -57,10 +57,10 @@ function determineWords(speech,words){
     }else
     if(words.includes('open Google')){
 
-        speech.text="Opening Google for you !"
+        speech.text="Opening Google for you sir !"
         window.open('https://www.google.com/');
     }else
-    if(words.includes('open Newton school for me')|| words.includes('open Newton school ')){
+    if(words.includes('open Newton school ')|| words.includes('open Newton school ')){
 
         speech.text="opening Newton school for you sir";
         window.open('https://www.newtonschool.co/');
@@ -80,7 +80,7 @@ function determineWords(speech,words){
     // by using Voice command submit the Todo in the List...
     if(words.includes('submit')){
         //console.log("ok i am submitting");
-        speech.text='ok i am submiting for you, sir';
+        speech.text='ok i am submiting for you sir';
         addToDo();
     }else if(words.includes('clear the list')){
         clearTheList(speech);
