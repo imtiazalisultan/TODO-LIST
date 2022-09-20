@@ -2,6 +2,67 @@ let form=document.querySelector('form');
 let text=document.getElementById('text');
 let todoCon=document.querySelector(".todo-con");
 
+
+//Jarvis program
+const button=document.getElementById('btn-jarvis');
+
+const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
+
+const recognition=new SpeechRecognition();
+
+recognition.onstart=function(){
+    console.log("speech is started");
+}
+
+recognition.onresult=function(event){
+ //   console.log(event);
+
+    const todoSpeak=event.results[0][0].transcript;
+   // console.log(todoSpeak);
+  // text.value=todoSpeak; // feeding the input text by this line
+  
+   //console.log("onresult");
+   computerSpeech(todoSpeak);
+   
+}
+
+function computerSpeech(words){
+    const speech=new SpeechSynthesisUtterance();
+
+    speech.lang='en-US';
+
+    speech.pitch=10;
+    speech.volume=1;
+    speech.rate=0.8;
+    //console.log("computer speech function",words);
+
+    determineWords(speech,words);
+    
+    window.speechSynthesis.speak(speech);
+}
+function determineWords(speech,words){
+
+ 
+        
+   
+
+    if(words.includes('submit')){
+        console.log("ok i am submitting");
+        speech.text='ok i am submiting for you, sir';
+        addToDo();
+    }else if(words.includes('clear the list')){
+        clearTheList(speech);
+    }else{
+        text.value=words;
+    }
+}
+
+button.addEventListener('click',()=>{
+    recognition.start();
+})
+
+
+
 //when we put a text and submit it . the event, call the addTodo list in the class todo-li 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
@@ -149,6 +210,18 @@ info.forEach(element=>{
    })
 })
 
+//FOR Clearing the todo by Using JARVIS Voice
+function clearTheList(speech){ 
+    todoli.forEach(elem=>{
+        if(elem.children[0].children[1].classList.contains("complete")){
+           elem.remove();
+           updateLocalStorage();
+        }
+    });
+    speech.text="ok clearing the list";
+}
+
+//Clearing the Todo W/o Voice Assisstant
 //FOR Clearing the todo
 let clear=document.querySelector(".clear");
 clear.addEventListener("click",()=>{
