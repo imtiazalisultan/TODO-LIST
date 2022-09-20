@@ -47,7 +47,7 @@ function determineWords(speech,words){
         speech.text='I am good , thank you for asking me sir.'
     }else
     if(words.includes('who am I')){
-        speech.text='You are awesome person, living on a earth to crack all the goals. You are good in your personality. !';
+        speech.text='You are awesome person, living on a earth to crack all the goals. You are good in your personality.';
     }else
     if(words.includes('how is the weather')){
         speech.text='why you care about that? you never go out';
