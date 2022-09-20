@@ -54,7 +54,7 @@ form input{
     border: none;
 }
 input::placeholder{
-    color: white;
+    color: gray;
     letter-spacing: 2px;
 }
 .list{
