@@ -173,7 +173,7 @@ cursor: pointer;
     cursor: pointer;
     font-size: 120%;
     font-weight: bolder;
-    color: whitesmoke;
+    color: rgb(2, 253, 44);
     
     width: 20%;
     height: 20%;
@@ -181,7 +181,7 @@ cursor: pointer;
     align-items: center;
     text-align: center;
     border-radius: 5px;
-    background-color: rgb(7, 134, 112);
+    background-color: rgb(44, 241, 14, 0.3);
 }
 #btn-jarvis :hover{
     cursor: pointer;
