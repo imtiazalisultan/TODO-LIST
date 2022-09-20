@@ -42,9 +42,7 @@ function computerSpeech(words){
 }
 function determineWords(speech,words){
 
-    if(words.includes('who is Rehan')){
-        speech.text='Rehan is HVAC engineer at saudi arabia. He is a good human being but it is Ghaaati Ghuuuti'
-    }else
+   
     if(words.includes('hello Jarvis how are you')){
         speech.text='I am good , thank you for asking me sir.'
     }else
