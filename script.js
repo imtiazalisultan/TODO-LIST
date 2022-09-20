@@ -42,12 +42,14 @@ function computerSpeech(words){
 }
 function determineWords(speech,words){
 
- 
+    if(words.includes('who is rehan')){
+        speech.text='Rehan is HVAC engineer at saudi arabia. He is a good human being but it is Ghaaati Ghuuuti'
+    }else
     if(words.includes('hello Jarvis how are you')){
-        speech.text='I am good , thank you for asking.'
+        speech.text='I am good , thank you for asking me sir.'
     }else
     if(words.includes('who am I')){
-        speech.text='You are my master!';
+        speech.text='You are awesome person, living on a earth to crack all the goals. You are good in your personality. !';
     }else
     if(words.includes('how is the weather')){
         speech.text='why you care about that? you never go out';
