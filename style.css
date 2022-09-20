@@ -168,3 +168,23 @@ cursor: pointer;
       width: 100%;
     }
   }
+#btn-jarvis{
+    margin: 29px 39%;
+    cursor: pointer;
+    font-size: 120%;
+    font-weight: bolder;
+    color: whitesmoke;
+    
+    width: 20%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(7, 134, 112);
+}
+#btn-jarvis :hover{
+    cursor: pointer;
+   
+ 
+}
